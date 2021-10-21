@@ -1,19 +1,156 @@
-<html lang="es" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Suma de datos</title>
+    <title>Tienda Online</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <form action="/" method="get">
-      Ingrese el primer numero:
-      <input type="number" name="num1" />
+    <div class="alert btn-dark" role="alert">
+      <img
+        src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png"
+        alt="logo"
+        width="80"
+      />
+      <strong>Arena Shop</strong>
       <br />
-      Ingrese el primer numero:
-      <input type="number" name="num2" />
-      <br />
-      <input type="submit" value="Sumar" />
-      <br />
-      El resultado: {{valor}}
-    </form>
+      Andres Botina - Carlos Díaz - Faver Ordoñez - Santiago Chana
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h5 id="cantidad">Total en productos: {{cantidad}}</h5>
+          <h5 id="subtotal">Subtotal: {{subtotal}}</h5>
+          <h5 id="descuento">Descuento: {{descuento}}</h5>
+          <h2 id="total">Total a pagar: {{total}}</h2>
+          <form action="/" method="get">
+            <div class="card">
+              <input type="submit" value="Calcular" class="btn btn-primary" />
+            </div>
+            <div class="row">
+              <!-- Productos -->
+              <div class="col-sm-6 card">
+                <img
+                  src="https://www.merkadomi.com/wp-content/uploads/2019/06/arroz-diana-3000.png"
+                  width="450"
+                  height="450"
+                  class="card-img-top"
+                />
+                <div class="card-footer">precio 3000</div>
+                <input type="number" name="arroz_blanco" value="3000" hidden />
+                <div class="card-body">
+                  <h4>Arroz Blanco</h4>
+                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Ingrese la cantidad"
+                  name="cantidad_arroz_blanco"
+                />
+              </div>
+              <div class="col-sm-6 card">
+                <img
+                  src="https://comfandivirtual.com.co/supermercados/69603-large_default/azucar-manuelita-refinada-bolsa-plas-1000gr.jpg"
+                  width="450"
+                  height="450"
+                  class="card-img-top"
+                />
+                <div class="card-footer">precio 3200</div>
+                <input type="number" name="azucar" value="3200" hidden />
+                <div class="card-body">
+                  <h4>Azucar Alkosto</h4>
+                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Ingrese la cantidad"
+                  name="cantidad_azucar"
+                />
+              </div>
+              <div class="col-sm-6 card">
+                <img
+                  src="https://m.media-amazon.com/images/I/81OUEMsLSUL._SX425_.jpg"
+                  width="450"
+                  height="450"
+                  class="card-img-top"
+                />
+                <div class="card-footer">precio 5000</div>
+                <input type="number" name="sal" value="5000" hidden />
+                <div class="card-body">
+                  <h4>Sal</h4>
+                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Ingrese la cantidad"
+                  name="cantidad_sal"
+                />
+              </div>
+              <div class="col-sm-6 card">
+                <img
+                  src="https://s.cornershopapp.com/product-images/2992305.jpg?versionId=wnh1rNMynBD7WVm0FBpwKUSC9lzVjg2g"
+                  width="450"
+                  height="450"
+                  class="card-img-top"
+                />
+                <div class="card-footer">precio 1500</div>
+                <input type="number" name="panela" value="1500" hidden />
+                <div class="card-body">
+                  <h4>Panela</h4>
+                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Ingrese la cantidad"
+                  name="cantidad_panela"
+                />
+              </div>
+              <div class="col-sm-6 card">
+                <img
+                  src="https://venemprende.shop/wp-content/uploads/2021/05/22.png"
+                  width="450"
+                  height="450"
+                  class="card-img-top"
+                />
+                <div class="card-footer">precio 4000</div>
+                <input type="number" name="harina_pan" value="4000" hidden />
+                <div class="card-body">
+                  <h4>Harina Pan</h4>
+                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Ingrese la cantidad"
+                  name="cantidad_harina_pan"
+                />
+              </div>
+              <div class="col-sm-6 card">
+                <img
+                  src="https://xn--tuqueas-8za.com/wp-content/uploads/2018/07/limon-papas.png"
+                  width="450"
+                  height="450"
+                  class="card-img-top"
+                />
+                <div class="card-footer">precio 1200</div>
+                <input type="number" name="tuquenas" value="1200" hidden />
+                <div class="card-body">
+                  <h4>Tuqeñas Limon</h4>
+                </div>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Ingrese la cantidad"
+                  name="cantidad_tuqenas"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
