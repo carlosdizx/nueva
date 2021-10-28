@@ -5,8 +5,6 @@ const app = express();
 app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
-  const num1 = parseInt(req.query.num1);
-  const num2 = parseInt(req.query.num2);
   const datos = Object.values(req.query);
   let total = 0;
   let subtotal = 0;
